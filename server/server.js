@@ -24,7 +24,8 @@ io.on("connection", socket => {
 
     io.emit("newMessage", {
       from: newMessage.from,
-      text: newMessage.text
+      text: newMessage.text,
+      createdAt: new Date().getTime()
     });
   });
 });
